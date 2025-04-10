@@ -14,7 +14,6 @@ app.use(
     extended: true,
   })
 );
-
 // Controllers to use with routing
 // Standard controllers
 app.use("/api/pong", pongController);
