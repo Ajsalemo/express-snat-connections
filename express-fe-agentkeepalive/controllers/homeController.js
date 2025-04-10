@@ -1,13 +1,12 @@
-const express = require("express");
-const router = express.Router();
+import { Router } from "express";
+const router = Router();
 
-const homeController = router.get("/", (_, res, next) => {
+export const homeController = router.get("/", (_, res) => {
   try {
-    res.send("ExpressAPI");
+    res.json("express-api-be");
   } catch (error) {
     console.log("An error has occurred: ", error);
     next(error);
   }
 });
 
-module.exports = homeController;
