@@ -1,13 +1,12 @@
-const express = require("express");
-const router = express.Router();
+import { Router } from "express";
+const router = Router();
 
-const pongController = router.get("/", (_, res) => {
+export const pongController = router.get("/", (_, res) => {
   try {
-    res.json({ message: "Pong" });
+    res.json({ message: "pong" });
   } catch (error) {
     console.log("An error has occurred: ", error);
     next(error);
   }
 });
 
-module.exports = pongController;

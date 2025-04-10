@@ -1,7 +1,7 @@
-const express = require("express");
-const router = express.Router();
+import { Router } from "express";
+const router = Router();
 
-const homeController = router.get("/", (_, res) => {
+export const homeController = router.get("/", (_, res) => {
   try {
     res.send("ExpressAPI");
   } catch (error) {
@@ -10,4 +10,3 @@ const homeController = router.get("/", (_, res) => {
   }
 });
 
-module.exports = homeController;
